@@ -16,20 +16,20 @@ public class PatientUpApplication {
 
 		SpringApplication.run(PatientUpApplication.class, args);
 	}
-	@Bean
+	//@Bean
 	public CommandLineRunner start(PatientRepository patientRepository){
 		return args -> {
 			patientRepository.save(
-					new Patient(null,"Ahmed",new Date(),false,12)
+					new Patient(null,"Ahmed",new Date(),false,120)
 			);
 			patientRepository.save(
 					new Patient(null,"Ayman",new Date(),false,120)
 			);
 			patientRepository.save(
-					new Patient(null,"Houssam",new Date(),true,10)
+					new Patient(null,"Houssam",new Date(),true,102)
 			);
 			patientRepository.save(
-					new Patient(null,"Salem",new Date(),false,54)
+					new Patient(null,"Salem",new Date(),false,540)
 			);
 
 			patientRepository.findAll().forEach(p->{
